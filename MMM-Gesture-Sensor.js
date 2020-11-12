@@ -17,13 +17,13 @@ Module.register("MMM-Gesture-Sensor", {
         },
         "LEFT": {
           notificationExec: {
-            notification: "LEFT",
+            notification: "PAGE_DECREMENT",
             payload:null,
           }
         },
         "RIGHT": {
           notificationExec: {
-            notification: "RIGHT",
+            notification: "PAGE_INCREMENT",
             payload:null,
           }
         },
