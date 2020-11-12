@@ -56,6 +56,10 @@ module.exports = NodeHelper.create({
       if (gesture) {
         var command=this.config.gestureMapFromTo[message];
         this.sendSocketNotification("SENDNOTI", command)
+        this.sendSocketNotification("CANCEL", {
+        last: gesture,
+        sequence: gesture,
+      })
       }
     })
     this.shell.on("error", (message)=>{
