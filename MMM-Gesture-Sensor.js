@@ -95,7 +95,7 @@ Module.register("MMM-Gesture-Sensor", {
     if(noti=="SENDNOTI")
     {
       this.currPage++;
-      if(this.currPage>=this.config.maxPages)
+      if(this.currPage>=this.maxPages)
       {
         this.currPage=0;
       }
