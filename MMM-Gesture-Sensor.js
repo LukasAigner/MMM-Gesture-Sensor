@@ -104,6 +104,7 @@ Module.register("MMM-Gesture-Sensor", {
     if(noti=="MAX_PAGES_CHANGED")
     {
       this.maxPages=payload;
+      console.log(this.maxPages);
     }
   },
 })
