@@ -53,7 +53,8 @@ module.exports = NodeHelper.create({
       var gesture = null
       gesture = (map.hasOwnProperty(message)) ? map[message] : null
       if (gesture) {
-        this.gestureProcess(gesture)
+        //this.gestureProcess(gesture)
+        this.log(true);
       }
     })
     this.shell.on("error", (message)=>{
