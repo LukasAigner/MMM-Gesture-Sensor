@@ -75,8 +75,8 @@ Module.register("MMM-Gesture-Sensor", {
     pythonPath: "/usr/bin/python",
   },
   
-  currPage=0,
-  maxPages=1,
+  currPage:0,
+  maxPages:1,
 
   start: function(){
   },
@@ -94,16 +94,16 @@ Module.register("MMM-Gesture-Sensor", {
   socketNotificationReceived: function(noti, payload) {
     if(noti=="SENDNOTI")
     {
-      this.config.currPage++;
-      if(this.config.currPage>=this.config.maxPages)
+      this.currPage++;
+      if(this.currPage>=this.config.maxPages)
       {
-        this.config.currPage=0;
+        this.currPage=0;
       }
-      this.sendNotification(this.config.commandSet[payload].notificationExec.notification,this.config.currPage)
+      this.sendNotification(this.config.commandSet[payload].notificationExec.notification,this.currPage)
     }
     if(noti=="MAX_PAGES_CHANGED")
     {
-      this.config.maxPages=payload;
+      this.maxPages=payload;
     }
   },
 })
