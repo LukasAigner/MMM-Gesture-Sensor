@@ -19,8 +19,6 @@ module.exports = NodeHelper.create({
   },
 
   socketNotificationReceived: function (noti, payload) {
-    this.sendNotificationTest(payload); 
-    console.log(true);
     switch (noti) {
       case "INIT":
         this.job(payload)
@@ -39,10 +37,6 @@ module.exports = NodeHelper.create({
       console.log(obj)
     }
   },
-  
-  sendNotificationTest: function(payload) {
-		this.sendSocketNotification("NOTIFICATION_TEST", payload);
-	},
 
   job: function(config) {
     this.config = config
@@ -60,17 +54,7 @@ module.exports = NodeHelper.create({
       gesture = (map.hasOwnProperty(message)) ? map[message] : null
       if (gesture) {
         var command=this.config.gestureMapFromTo[message];
-        try{
         this.sendSocketNotification("SENDNOTI", command);
-        this.sendSocketNotification("CANCEL", {
-        last: gesture,
-        sequence: gesture,
-      });
-        }
-        catch(err)
-        {
-          console.log(err);
-        }
       }
     })
     this.shell.on("error", (message)=>{
