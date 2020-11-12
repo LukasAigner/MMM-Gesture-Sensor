@@ -193,23 +193,23 @@ class PAJ7620U2(object):
 	def check_gesture(self):
 		Gesture_Data=self._read_u16(PAJ_INT_FLAG1)
 		if Gesture_Data == PAJ_UP:
-			print("Up\r\n")
+			print("Up")
 		elif Gesture_Data == PAJ_DOWN:
-			print("Down\r\n")
+			print("Down")
 		elif Gesture_Data == PAJ_LEFT:
-			print("Left\r\n")	
+			print("Left")	
 		elif Gesture_Data == PAJ_RIGHT:
-			print("Right\r\n")	
+			print("Right")	
 		elif Gesture_Data == PAJ_FORWARD:
-			print("Forward\r\n")	
+			print("Forward")	
 		elif Gesture_Data == PAJ_BACKWARD:
-			print("Backward\r\n")
+			print("Backward")
 		elif Gesture_Data == PAJ_CLOCKWISE:
-			print("Clockwise\r\n")	
+			print("Clockwise")	
 		elif Gesture_Data == PAJ_COUNT_CLOCKWISE:
-			print("AntiClockwise\r\n")	
+			print("AntiClockwise")	
 		elif Gesture_Data == PAJ_WAVE:
-			print("Wave\r\n")	
+			print("Wave")	
 		return Gesture_Data
 
 if __name__ == '__main__':
@@ -221,6 +221,6 @@ if __name__ == '__main__':
 	paj7620u2=PAJ7620U2()
 
 	while True:
-		time.sleep(0.05)
+		time.sleep(0.15)
 		paj7620u2.check_gesture()
 	
