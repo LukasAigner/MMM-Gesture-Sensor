@@ -1,6 +1,6 @@
 Module.register("MMM-Gesture-Sensor", {
   defaults: {
-    },
+    verbose:false,
     
     commandSet: {
         "FORWARD": {
@@ -59,12 +59,21 @@ Module.register("MMM-Gesture-Sensor", {
       "anti-clockwise": "ANTICLOCKWISE",
       "wave": "WAVE"
    },
+    
+    pythonPath: "/usr/bin/python",
+  },
 
   start: function(){
   },
 
   notificationReceived: function(noti, payload, sender) {
+    if (noti == "DOM_OBJECTS_CREATED") {
+      this.prepare()
+    }
+  },
   
+  prepare: function() {
+    this.sendSocketNotification("INIT", this.config)
   },
 
   socketNotificationReceived: function(noti, payload, sender) {
