@@ -85,6 +85,11 @@ Module.register("MMM-Gesture-Sensor", {
     if (noti == "DOM_OBJECTS_CREATED") {
       this.prepare()
     }
+    if(noti=="MAX_PAGES_CHANGED")
+    {
+      this.maxPages=payload;
+      console.log(this.maxPages);
+    }
   },
   
   prepare: function() {
@@ -100,11 +105,6 @@ Module.register("MMM-Gesture-Sensor", {
         this.currPage=0;
       }
       this.sendNotification(this.config.commandSet[payload].notificationExec.notification,this.currPage)
-    }
-    if(noti=="MAX_PAGES_CHANGED")
-    {
-      this.maxPages=payload;
-      console.log(this.maxPages);
     }
   },
 })
