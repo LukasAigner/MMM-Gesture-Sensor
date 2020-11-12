@@ -42,8 +42,6 @@ PAJ_BACKWARD		    = 0x20
 PAJ_CLOCKWISE			= 0x40
 PAJ_COUNT_CLOCKWISE		= 0x80
 PAJ_WAVE				= 0x100
-
-GES_QUIT_TIME			=.800
 #Power up initialize array
 Init_Register_Array = (
 	(0xEF,0x00),
@@ -212,7 +210,6 @@ class PAJ7620U2(object):
 			print("AntiClockwise\r\n")	
 		elif Gesture_Data == PAJ_WAVE:
 			print("Wave\r\n")
-		time.sleep(GES_QUIT_TIME)
 		return Gesture_Data
 
 if __name__ == '__main__':
@@ -224,7 +221,7 @@ if __name__ == '__main__':
 	paj7620u2=PAJ7620U2()
 
 	while True:
-		time.sleep(0.05)
+		time.sleep(0.25)
 		paj7620u2.check_gesture()
 		
 
