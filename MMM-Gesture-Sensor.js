@@ -1,6 +1,4 @@
 Module.register("MMM-Gesture-Sensor", {
-  currPage=0,
-  maxPages=1,
   defaults: {
     verbose:true,
     
@@ -76,6 +74,9 @@ Module.register("MMM-Gesture-Sensor", {
     
     pythonPath: "/usr/bin/python",
   },
+  
+  currPage=0,
+  maxPages=1,
 
   start: function(){
   },
