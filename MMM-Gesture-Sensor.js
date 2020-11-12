@@ -3,6 +3,18 @@ Module.register("MMM-Gesture-Sensor", {
     verbose:true,
     
     commandSet: {
+      "UP": {
+          notificationExec: {
+            notification: "UP",
+            payload: null
+          }
+        },
+      "DOWN": {
+          notificationExec: {
+            notification: "DOWN",
+            payload: null
+          }
+        },
         "FORWARD": {
           notificationExec: {
             notification: "FORWARD",
@@ -77,6 +89,5 @@ Module.register("MMM-Gesture-Sensor", {
   },
 
   socketNotificationReceived: function(noti, payload, sender) {
-    console.log(noti);
   }
 })
