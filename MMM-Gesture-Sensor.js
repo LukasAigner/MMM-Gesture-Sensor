@@ -56,8 +56,8 @@ Module.register("MMM-Gesture-Sensor", {
       "Forward": "FORWARD",
       "Backward": "BACKWARD",
       "Clockwise": "CLOCKWISE",
-      "anti-clockwise": "ANTICLOCKWISE",
-      "wave": "WAVE"
+      "AntiClockwise": "ANTICLOCKWISE",
+      "Wave": "WAVE"
    },
     
     pythonPath: "/usr/bin/python",
