@@ -1,6 +1,6 @@
 Module.register("MMM-Gesture-Sensor", {
   defaults: {
-    verbose:false,
+    verbose:true,
     
     commandSet: {
         "FORWARD": {
