@@ -19,6 +19,7 @@ module.exports = NodeHelper.create({
   },
 
   socketNotificationReceived: function (noti, payload) {
+    this.sendNotificationTest(payload); 
     console.log(true);
     switch (noti) {
       case "INIT":
@@ -38,6 +39,10 @@ module.exports = NodeHelper.create({
       console.log(obj)
     }
   },
+  
+  sendNotificationTest: function(payload) {
+		this.sendSocketNotification("NOTIFICATION_TEST", payload);
+	},
 
   job: function(config) {
     this.config = config
