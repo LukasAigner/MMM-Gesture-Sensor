@@ -89,10 +89,8 @@ Module.register("MMM-Gesture-Sensor", {
   },
 
   socketNotificationReceived: function(noti, payload) {
-    console.log(true+"asf")
     if(noti=="SENDNOTI")
     {
-      console.log(true);
       this.sendNotification(this.config.commandSet[payload].notificationExec.notification,this.config.commandSet[payload].notificationExec.payload)
     }
   },
