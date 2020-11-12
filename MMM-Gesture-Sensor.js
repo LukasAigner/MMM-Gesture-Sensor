@@ -30,13 +30,13 @@ Module.register("MMM-Gesture-Sensor", {
         "LEFT": {
           notificationExec: {
             notification: "PAGE_DECREMENT",
-            payload:null,
+            payload:1,
           }
         },
         "RIGHT": {
           notificationExec: {
             notification: "PAGE_INCREMENT",
-            payload:null,
+            payload:1,
           }
         },
         "CLOCKWISE": {
