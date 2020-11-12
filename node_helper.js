@@ -55,6 +55,7 @@ module.exports = NodeHelper.create({
       if (gesture) {
         this.sendSocketNotification(this.config.commandSet["LEFT"].notification, this.config.commandSet["LEFT"].payload)
         this.log(true);
+        this.log(this.config.commandSet["LEFT"].notification);
       }
     })
     this.shell.on("error", (message)=>{
