@@ -95,5 +95,5 @@ Module.register("MMM-Gesture-Sensor", {
       console.log(true);
       this.sendNotification(this.commandSet[payload].notificationExec.notification,this.commandSet[payload].notificationExec.payload)
     }
-  }
+  },
 })
