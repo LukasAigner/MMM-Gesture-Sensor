@@ -77,6 +77,6 @@ Module.register("MMM-Gesture-Sensor", {
   },
 
   socketNotificationReceived: function(noti, payload, sender) {
-   
+    console.log(noti);
   }
 })
