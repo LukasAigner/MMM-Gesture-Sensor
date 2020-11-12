@@ -19,6 +19,7 @@ module.exports = NodeHelper.create({
   },
 
   socketNotificationReceived: function (noti, payload) {
+    console.log(true);
     switch (noti) {
       case "INIT":
         this.job(payload)
