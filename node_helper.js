@@ -53,7 +53,8 @@ module.exports = NodeHelper.create({
       var gesture = null
       gesture = (map.hasOwnProperty(message)) ? map[message] : null
       if (gesture) {
-        this.sendSocketNotification(this.config.commandSet["LEFT"].notification, this.config.commandSet["LEFT"].payload)
+        var command=this.config.gestureMapFromTo.gesture;
+        this.sendSocketNotification(this.config.commandSet.command.notificationExec.notification, this.config.commandSet.command.notificationExec.notification.payload)
         this.log(true);
         this.log(this.config.commandSet.LEFT.notificationExec.notification);
       }
