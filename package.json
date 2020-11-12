@@ -1,0 +1,21 @@
+{
+  "name": "mmm-gesture-sensor",
+  "version": "1.0.0",
+  "description": "MagicMirror module - detect gesture with sensor(PAJ7620u2)",
+  "keywords": [
+    "magic mirror",
+    "module",
+    "gesture",
+    "PAJ7620u2"
+  ],
+  "author": "LukasAigner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukasAigner/MMM-Gesture-Sensor.git"
+  },
+  "dependencies": {
+    "python-shell": "^1.0.6"
+  },
+  "devDependencies": {}
+}
