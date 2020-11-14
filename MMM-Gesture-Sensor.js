@@ -29,13 +29,13 @@ Module.register("MMM-Gesture-Sensor", {
         },
         "LEFT": {
           notificationExec: {
-            notification: "PAGE_CHANGED",
+            notification: "CAROUSEL_PREVIOUS",
             payload:null,
           }
         },
         "RIGHT": {
           notificationExec: {
-            notification: "PAGE_CHANGED",
+            notification: "CAROUSEL_NEXT",
             payload:null,
           }
         },
@@ -74,9 +74,6 @@ Module.register("MMM-Gesture-Sensor", {
     
     pythonPath: "/usr/bin/python",
   },
-  
-  currPage:0,
-  maxPages:1,
 
   start: function(){
   },
@@ -84,11 +81,6 @@ Module.register("MMM-Gesture-Sensor", {
   notificationReceived: function(noti, payload, sender) {
     if (noti == "DOM_OBJECTS_CREATED") {
       this.prepare()
-    }
-    if(noti=="MAX_PAGES_CHANGED")
-    {
-      this.maxPages=payload;
-      console.log(this.maxPages);
     }
   },
   
@@ -99,12 +91,7 @@ Module.register("MMM-Gesture-Sensor", {
   socketNotificationReceived: function(noti, payload) {
     if(noti=="SENDNOTI")
     {
-      this.currPage++;
-      if(this.currPage>=this.maxPages)
-      {
-        this.currPage=0;
-      }
-      this.sendNotification(this.config.commandSet[payload].notificationExec.notification,this.currPage)
+      this.sendNotification(this.config.commandSet[payload].notificationExec.notification)
     }
   },
 })
