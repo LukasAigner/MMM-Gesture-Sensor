@@ -62,10 +62,10 @@ Module.register("MMM-Gesture-Sensor", {
 
 
     gestureMapFromTo: {
-      "Up": "UP",
-      "Down": "DOWN",
-      "Left": "LEFT",
-      "Right": "RIGHT",
+      "Up": "LEFT",
+      "Down": "RIGHT",
+      "Left": "UP",
+      "Right": "DOWN",
       "Forward": "FORWARD",
       "Backward": "BACKWARD",
       "Clockwise": "CLOCKWISE",
